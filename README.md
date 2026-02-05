@@ -1,3 +1,5 @@
+# 22003155_BuiManhHieu_KTTKPM
+
 rabbitmq = Message Broker
 producer = Gui message
 consumer = Xu ly message
