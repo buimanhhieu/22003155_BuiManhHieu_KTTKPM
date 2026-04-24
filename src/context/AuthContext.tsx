@@ -32,7 +32,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       setError(null);
       try {
         const response = await apiService.login(credentials);
-        if (response.status === "success") {
+        if (response.token || response.userId || response.status === "success") {
           setIsAuthenticated(true);
           setUserId(response.userId || "");
           return true;

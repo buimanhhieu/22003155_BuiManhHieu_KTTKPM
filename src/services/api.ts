@@ -60,6 +60,10 @@ class ApiService {
         this.token = response.data.token;
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('userId', response.data.userId || '');
+      } else if (response.data.userId) {
+        this.token = response.data.userId;
+        localStorage.setItem('token', response.data.userId);
+        localStorage.setItem('userId', response.data.userId);
       }
       return response.data;
     } catch (error) {
