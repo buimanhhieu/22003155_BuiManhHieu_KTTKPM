@@ -40,6 +40,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   Tours
                 </button>
                 <button
+                  onClick={() => navigate("/seller")}
+                  className="text-gray-700 hover:text-indigo-600 font-semibold transition"
+                >
+                  Seller
+                </button>
+                <button
                   onClick={handleLogout}
                   className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition"
                 >

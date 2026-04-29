@@ -8,6 +8,7 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import Login from "./components/Login";
 import TourList from "./components/TourList";
 import TourDetails from "./components/TourDetails";
+import SellerDashboard from "./components/SellerDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
 import "./App.css";
@@ -42,6 +43,17 @@ function AppContent() {
             <ProtectedRoute>
               <Layout>
                 <TourDetails />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/seller"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <SellerDashboard />
               </Layout>
             </ProtectedRoute>
           }

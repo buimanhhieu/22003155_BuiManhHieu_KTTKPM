@@ -1,6 +1,6 @@
 import axios from 'axios';
 import type { AxiosInstance } from 'axios';
-import type { LoginRequest, LoginResponse, BookingRequest, BookingResponse, Tour } from '../types';
+import type { LoginRequest, LoginResponse, BookingRequest, BookingResponse, Tour, CreateTourRequest } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
 
@@ -141,6 +141,15 @@ class ApiService {
         message: 'An unexpected error occurred',
       };
     }
+  }
+
+  /**
+   * Create a new tour
+   * Calls Orchestrator POST /tours
+   */
+  async createTour(tour: CreateTourRequest): Promise<Tour> {
+    const response = await this.api.post<Tour>('/tours', tour);
+    return response.data;
   }
 
   /**

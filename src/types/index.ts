@@ -34,6 +34,18 @@ export interface ApiResponse<T> {
   message?: string;
 }
 
+export interface CreateTourRequest {
+  name: string;
+  destination: string;
+  price: number;
+  duration: number;
+  description: string;
+  image?: string;
+  startDate?: string;
+  rating?: number;
+  maxCapacity?: number;
+}
+
 export interface LoginRequest {
   username: string;
   password: string;
